@@ -35,5 +35,18 @@ class IsUnique {
         }
         return true
     }
+    
+    fun isUniqueBit (str: String): Boolean {
+        var checker = 0;
+        str.forEach {
+            val charBit = 1 shl (it - 'a')
+            if((checker and charBit) > 0) {
+                return false
+            }
+            checker = checker or charBit
+        }
+        return true
+    }
+
 
 }

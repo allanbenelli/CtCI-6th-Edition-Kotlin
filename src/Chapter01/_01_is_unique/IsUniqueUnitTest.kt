@@ -10,6 +10,7 @@ class IsUniqueUnitTest {
         assertEquals(true, IsUnique().isUniqueBest(""))
         assertEquals(true, IsUnique().isUniqueBetter(""))
         assertEquals(true, IsUnique().isUniqueNormal(""))
+        assertEquals(true, IsUnique().isUniqueBit(""))
     }
 
     @Test
@@ -17,6 +18,7 @@ class IsUniqueUnitTest {
         assertEquals(true, IsUnique().isUniqueBest("pedram"))
         assertEquals(true, IsUnique().isUniqueBetter("pedram"))
         assertEquals(true, IsUnique().isUniqueNormal("pedram"))
+        assertEquals(true, IsUnique().isUniqueBit("pedram"))
     }
 
     @Test
@@ -24,6 +26,7 @@ class IsUniqueUnitTest {
         assertEquals(false, IsUnique().isUniqueBest("test"))
         assertEquals(false, IsUnique().isUniqueBetter("test"))
         assertEquals(false, IsUnique().isUniqueNormal("test"))
+        assertEquals(false, IsUnique().isUniqueBit("test"))
     }
 
     @Test
@@ -31,6 +34,7 @@ class IsUniqueUnitTest {
         assertEquals(false, IsUnique().isUniqueBest("estt"))
         assertEquals(false, IsUnique().isUniqueBetter("estt"))
         assertEquals(false, IsUnique().isUniqueNormal("estt"))
+        assertEquals(false, IsUnique().isUniqueBit("estt"))
     }
 
 }

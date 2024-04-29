@@ -1,7 +1,6 @@
 package Utility
 
 
-
 data class Node<T>(var data: T, var next: Node<T>? = null, var prev: Node<T>? = null, ) {
     override fun toString(): String {
         return "$data${next?.let { " -> ${it}" } ?: ""}"
@@ -96,16 +95,4 @@ class LinkedList<T> {
         return size
     }
 
-}
-fun main() {
-    val list = LinkedList<Int>()
-    list.push(3)
-    list.push(2)
-    list.push(1)
-    
-    println("Before removing last node: $list")
-    val removedValue = list.removeLast()
-    
-    println("After removing last node: $list")
-    println("Removed value: $removedValue")
 }

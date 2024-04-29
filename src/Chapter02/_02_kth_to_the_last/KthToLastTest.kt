@@ -1,6 +1,7 @@
 package Chapter02._02_kth_to_the_last
 
 import Utility.LinkedList
+import Utility.Node
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
@@ -13,7 +14,7 @@ class KthToLastTest {
         (0 until 10).forEach{linkedList.append(it)}
         
         //when
-        val kthToLast = linkedList.kthToLast(7)
+        val kthToLast: Node<Int>? = linkedList.kthToLast(7)
         
         //then
         assertEquals(3, kthToLast?.data)

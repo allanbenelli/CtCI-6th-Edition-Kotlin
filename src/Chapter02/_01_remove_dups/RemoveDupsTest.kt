@@ -16,7 +16,7 @@ class RemoveDupsTest {
         linkedList.removeDups()
         
         //then
-        assertEquals(1, linkedList.getSize())
+        assertEquals(1, linkedList.size)
         val head = linkedList.nodeAt(0)
         assertEquals(2, head?.data)
         assertEquals(null, head?.next)
@@ -33,7 +33,7 @@ class RemoveDupsTest {
         linkedList.removeDups()
         
         //then
-        assertEquals(10, linkedList.getSize())
+        assertEquals(10, linkedList.size)
         (0 until 10).forEach { it ->
             assertEquals(it, linkedList.nodeAt(it)?.data)
         }

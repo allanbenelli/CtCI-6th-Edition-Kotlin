@@ -10,7 +10,8 @@ data class Node<T>(var data: T, var next: Node<T>? = null, var prev: Node<T>? = 
 class LinkedList<T> {
     private var head: Node<T>? = null
     private var tail: Node<T>? = null
-    private var size = 0
+    var size = 0
+        private set
     
     fun isEmpty(): Boolean {
         return size == 0
@@ -89,10 +90,6 @@ class LinkedList<T> {
             node.next?.prev = node
         }
         return result?.data
-    }
-    
-    fun getSize() : Int {
-        return size
     }
 
 }
